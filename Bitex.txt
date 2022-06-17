@@ -1,0 +1,26 @@
+Smart Contract Engineering Internship Assignment
+
+Thanks for taking your time and applying for our internship program.
+
+First step is a short programming assignment (“homework”). It should not require more than three to four hours of your time to complete.
+
+Please send back a ZIP file of the project, or a link to a public repository. The deadline for the assignment is next Friday (June 17, 23:59).
+
+The choice of any programming language or any other frameworks and libraries is up to you as long as they are clearly documented (for example, requirements.txt file for python submissions) and available publicly.
+
+The problem requires you to write two different components: a web
+service providing REST API and a command line tool that uses the web service.
+
+The web service should have the following functionality and interfaces:
+
+Receives and stores key-value records. You do not need to persist these on disk (but you can, if you want).
+Key-value records have an associated history, e.g. they are versioned.
+Normally when a value for a key is fetched, it returns only the current value, but it is possible to fetch the full history.
+The client is a simple front-end for the REST API functionality of the server. It should support fetching current value of a key, fetching history of a key, and setting a key to a value. For example (you are not required to implement this particular command line interface):
+
+./client set key1 value1
+./client get key1
+./client history key1
+Please feel free to elaborate on the service and command line for any other functionality you find useful in a use scenario that appears as natural use of this kind of service.
+
+If you have any questions, please do not hesitate to contact me at talebi242@gmail.com.

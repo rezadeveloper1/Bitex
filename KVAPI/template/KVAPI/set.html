@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="{% static 'choice/css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'choice/css/style.css' %}">
+</head>
+
+<body class="shabnam">
+  <div class="container">
+
+        <form action="" method="post" class="form">
+        <h4>Enter The Key:</h4>
+        {% csrf_token %}
+        {{form.key}}
+        <br>
+        {{form.value}}
+        <input type="submit" value="SEND" class="button">
+        </form>
+    </div>
+</div>
+  <script src="js/script.js"></script>
+  <script src="Codilo.js"></script>
+</body>
+
+</html>

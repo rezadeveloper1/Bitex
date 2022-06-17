@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="{% static 'choice/css/reset.css' %}">
+  <link rel="stylesheet" href="{% static 'choice/css/style.css' %}">
+</head>
+
+<body class="shabnam">
+{% if keys %}
+  {% for i in keys %}
+    <div class="container">
+      <div class="info">
+        <h6>{{i.key}}</h6>
+        <h6>{{i.value}}</h6>
+        <h6>{{i.date}}</h6>
+      </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <div class="container">
+    {% if key %}
+    <div class="info">
+      <h6>{{key.key}}</h6>
+      <h6>{{key.value}}</h6>
+      <h6>{{key.date}}</h6>
+    </div>
+    {% else %}
+      <form action="" method="post" class="form">
+        <h4>Enter The Key:</h4>
+        {% csrf_token %}
+        <input type="text" class="textinp" name="key" id="">
+        <input type="submit" value="SEND" class="button">
+      </form>
+    {% endif %}
+{% endif %}
+</div>
+  <script src="js/script.js"></script>
+  <script src="Codilo.js"></script>
+</body>
+
+</html>
